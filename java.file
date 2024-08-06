@@ -1,0 +1,150 @@
+import java.util.Scanner;
+
+
+public class Atmpin {
+	 static int pin;
+	 static int amount;
+	 
+	 
+
+	public static void main(String[] args) {
+		
+		Atmpin ap=new Atmpin();
+		Scanner sc= new Scanner(System.in);
+		System.out.println("********Welcome to Automated Teller Machine********");
+		System.out.println("Please insert your card");
+		System.out.println("select language from list");
+		System.out.println(">>Marathi");
+		System.out.println(">>English");
+		System.out.println(">>Hindi");
+		
+		 
+		for(int i=0; ;i++) {
+		System.out.println("Choose transcation type which you want");
+		
+		
+		
+		
+		System.out.println("1.Ministatement");
+		
+		
+		System.out.println("2.Cash withdraw");
+		System.out.println("3.Balance inquiry");
+		System.out.println("4.Pin generation");
+		System.out.println("5.Deposit Money");
+		System.out.println("6.Cancel");
+		System.out.println("Enter your choice:");
+		 int choice=sc.nextInt();
+		
+		switch(choice) {
+		
+		case 1:
+			System.out.println("Enter your pin:");
+			pin=sc.nextInt();
+			if(pin==yourpin) {
+				
+				System.out.println("**Your Ministatement is**");
+			             }
+			else {
+				System.out.println("you entered wrong pin");
+			}
+			 System.out.println("**************************************");
+			break;
+			
+		case 2:
+			
+			 System.out.println("Enter your pin:");
+			 pin=sc.nextInt();
+             if(pin==yourpin)
+             {
+            	System.out.println("Enter amount you want withdraw:");
+            	amount=sc.nextInt();
+            	  if(amount<=7000) {
+				  System.out.println("collect your cash");
+		            }
+                else  
+                {
+        	   System.out.println("Insufficient balance");
+               }
+             }
+             else {
+            	 System.out.println(" You entered Wrong pin");
+             }
+             System.out.println("**************************************");
+             break;
+             
+		case 3:
+			  System.out.println("Enter your pin:");
+			  pin=sc.nextInt();
+			  if(pin==yourpin) 
+			  {
+				System.out.println("Your balance is: 7000");
+			 }
+			  else
+			  {
+				  System.out.println("you entered wrong pin");
+			  }
+			  System.out.println("**************************************");
+			  break;
+			  
+		case 4:
+			 System.out.println("Enter your pin");
+			  pin=sc.nextInt();
+			  if(pin==yourpin) 
+			  {
+				  System.out.println("Enter your 11-digit account number:");
+				  long acc_number = sc.nextLong();
+				  System.out.println("Enter your 10-digit mobile number:");
+				  long mob_no= sc.nextLong();
+				  System.out.println("Pin generate succeessfully");
+			}
+			  System.out.println("**************************************");
+			  break;
+			  
+		case 5:	
+			 System.out.println("Enter your pin");
+			  pin=sc.nextInt();
+			  if(pin==yourpin) 
+			  {
+				  System.out.println("Enter account number to transfer account:");
+				  long transferAccountNumber = sc.nextLong();
+					System.out.println("Enter Amount You Want To Transfer : ");
+					long transferAccountMoney = sc.nextLong();
+					if(amount<=7000) {
+				    System.out.println("** Fund Transfered Successfully **");
+					}
+					
+					else
+					{
+						System.out.println("** Fund Not Transferred..Please Try Again **");
+					}
+			  }
+
+			  
+			  System.out.println("**************************************");
+			  break;
+		case 6:
+			System.out.println("Enter your pin");
+			  pin=sc.nextInt();
+			  if(pin==yourpin) 
+			  {
+				  
+				  System.out.println("cancel");
+				  System.out.println("transaction is cancelled successfully");
+			  }
+			  System.out.println("**************************************");
+			 break;
+			
+			default:
+		            System.out.println("** Invalid Choice **");
+		             System.exit(0);
+	}
+		
+
+		
+		
+		}
+
+			}
+
+}
